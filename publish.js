@@ -127,7 +127,7 @@ function buildMetadata (spec, auth, registry, manifest, tardata, opts) {
   root['dist-tags'][tag] = manifest.version
 
   const tbName = manifest.name + '-' + manifest.version + '.tgz'
-  console.log({ tbname})
+  console.log({ tbName })
   const tbURI = manifest.name + '/-/' + tbName
   console.log({ tbURI})
 
