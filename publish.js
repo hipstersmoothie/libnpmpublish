@@ -127,7 +127,10 @@ function buildMetadata (spec, auth, registry, manifest, tardata, opts) {
   root['dist-tags'][tag] = manifest.version
 
   const tbName = manifest.name + '-' + manifest.version + '.tgz'
+  console.log({ tbname})
   const tbURI = manifest.name + '/-/' + tbName
+  console.log({ tbURI})
+
   const integrity = ssri.fromData(tardata, {
     algorithms: [...new Set(['sha1'].concat(opts.algorithms))]
   })
