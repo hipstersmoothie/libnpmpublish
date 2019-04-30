@@ -31,6 +31,7 @@ function publish (manifest, tarball, opts) {
         "Remove the 'private' field from the package.json to publish it."
       ), { code: 'EPRIVATE' })
     }
+    console.log(manifest)
     const spec = npa.resolve(manifest.name, manifest.version)
     // NOTE: spec is used to pick the appropriate registry/auth combo.
     opts = opts.concat(manifest.publishConfig, { spec })
